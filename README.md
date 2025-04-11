@@ -143,3 +143,13 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Permet une sélection dynamique des données.
   - **Comment** : Utilise `filter` pour ne garder que les éléments correspondants.
   - **Résultat** : L’API supporte le filtrage par catégorie.
+
+### 9. Gestion des appels API avec React Query
+- **Processus** :
+  - Installation de `@tanstack/react-query`.
+  - Configuration de `QueryClientProvider` dans `main.jsx`.
+  - Utilisation de `useQuery` dans `App.jsx`.
+- **Détails** :
+  - **Pourquoi** : Simplifie et optimise la gestion des données.
+  - **Comment** : Gère les appels API avec caching et états automatiques.
+  - **Résultat** : Un chargement fluide avec gestion d’erreurs.
