@@ -42,4 +42,12 @@ public class DashboardService {
     public List<DataPoint> getMockedData(){
         return cache.get("mockedData");
     }
+
+    public List<DataPoint> getDataByCategory(String category) {
+        return cache.get("mockedData")
+                .stream()
+                .filter(point -> point.getCategory()
+                        .equalsIgnoreCase(category))
+                .collect(Collectors.toList());
+    }
 }
