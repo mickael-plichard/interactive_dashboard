@@ -19,7 +19,7 @@ function ChartComponent({ data }) {
 
     const options = {
         scales: {
-            yAxes: {
+            y: {
                 beginAtZero: true,
             },
         },
