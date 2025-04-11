@@ -125,3 +125,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Optimise les performances en évitant des calculs répétés.
   - **Comment** : Stocke les données mockées en mémoire avec une expiration.
   - **Résultat** : Réponses API plus rapides après le premier appel.
+
+### 7. Asynchronisme avec CompletableFuture
+- **Processus** :
+  - Modification de `loadMockedData` pour retourner un `CompletableFuture`.
+  - Intégration avec le cache Caffeine.
+- **Détails** :
+  - **Pourquoi** : Permet des opérations non bloquantes.
+  - **Comment** : Exécute la génération des données dans un thread séparé.
+  - **Résultat** : Simule une récupération lente, optimisée par le cache.
