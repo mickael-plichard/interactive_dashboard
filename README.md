@@ -116,3 +116,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Sépare la logique de récupération des données.
   - **Comment** : Encapsule `useState` et `useEffect` dans une fonction réutilisable.
   - **Résultat** : Un composant `App` plus clair et extensible.
+
+### 6. Caching avec Caffeine
+- **Processus** :
+  - Ajout de la dépendance Caffeine dans `pom.xml`.
+  - Configuration d’un `LoadingCache` dans `DashboardService`.
+- **Détails** :
+  - **Pourquoi** : Optimise les performances en évitant des calculs répétés.
+  - **Comment** : Stocke les données mockées en mémoire avec une expiration.
+  - **Résultat** : Réponses API plus rapides après le premier appel.
