@@ -87,3 +87,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Réduit le couplage et améliore la modularité.
   - **Comment** : Spring crée et gère l’instance de `DashboardService`, puis l’injecte automatiquement.
   - **Résultat** : Le controller utilise un service sans l’instancier manuellement, facilitant les tests et évolutions.
+
+### 3. Configuration CORS
+- **Processus** :
+  - Création d’une classe `CorsConfig` implémentant `WebMvcConfigurer`.
+  - Configuration pour autoriser les requêtes depuis `http://localhost:5173` sur les endpoints `/api/**`.
+- **Détails** :
+  - **Pourquoi** : Permet la communication entre le frontend et le backend sur des ports différents.
+  - **Comment** : Définit les origines, méthodes, et en-têtes autorisés via Spring.
+  - **Résultat** : Prépare l’API à être appelée sans erreur CORS par le frontend.
