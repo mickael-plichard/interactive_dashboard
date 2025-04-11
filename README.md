@@ -153,3 +153,13 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Simplifie et optimise la gestion des données.
   - **Comment** : Gère les appels API avec caching et états automatiques.
   - **Résultat** : Un chargement fluide avec gestion d’erreurs.
+
+### 10. Filtres dynamiques avec Context API
+- **Processus** :
+  - Création d’un `FilterContext` pour gérer l’état des filtres.
+  - Intégration dans `main.jsx` avec `FilterProvider`.
+  - Mise à jour de `App.jsx` pour utiliser le filtre.
+- **Détails** :
+  - **Pourquoi** : Permet une gestion centralisée des filtres.
+  - **Comment** : Stocke la catégorie sélectionnée et déclenche des requêtes dynamiques.
+  - **Résultat** : Un tableau de bord interactif avec filtrage par catégorie.
