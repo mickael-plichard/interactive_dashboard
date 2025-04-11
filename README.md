@@ -96,3 +96,14 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Permet la communication entre le frontend et le backend sur des ports différents.
   - **Comment** : Définit les origines, méthodes, et en-têtes autorisés via Spring.
   - **Résultat** : Prépare l’API à être appelée sans erreur CORS par le frontend.
+
+### 4. Graphique simple avec Chart.js
+- **Processus** :
+  - Création d’un projet React avec Vite.
+  - Ajout de `chart.js` et `react-chartjs-2`.
+  - Implémentation de `ChartComponent` pour afficher un graphique en barres.
+  - Mise à jour de `App.jsx` pour récupérer et passer les données.
+- **Détails** :
+  - **Pourquoi** : Transforme les données brutes en visualisation intuitive.
+  - **Comment** : Chart.js mappe les données sur un graphique configurable.
+  - **Résultat** : Un tableau de bord visuel affichant les valeurs par date.
