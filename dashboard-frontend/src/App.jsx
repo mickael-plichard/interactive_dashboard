@@ -1,15 +1,19 @@
-import ChartComponent from "./ChartComponent.jsx";
-import userDashboardData from "./hooks/userDashboardData.js";
-
+import { useQuery} from "@tanstack/react-query";
+import ChartComponent from "../ChartComponent.jsx";
 
 function App() {
-    const {data, loading, error} = userDashboardData();
+    const { data, isLoading, error } = useQuery({
+        queryKey: ["userDashboardData"],
+        queryFn: () =>
+            fetch("http://localhost:8000/api/dashboard")
+                .then(res => res.json()),
+    });
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Something went wrong : {error.message}</div>;
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
 
     return (
-        <div style={{padding: '20px'}}>
+        <div style={{ padding: '20px' }}>
             <h1>Dashboard</h1>
             <ChartComponent data={data}/>
         </div>
