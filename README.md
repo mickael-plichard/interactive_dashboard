@@ -78,3 +78,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Simplifie la manipulation des collections avec un style déclaratif.
   - **Comment** : `Stream.of` crée un flux d’objets `DataPoint`, et `collect(Collectors.toList())` le transforme en liste.
   - **Résultat** : Une API REST retourne des données JSON prêtes à être consommées par le frontend.
+
+### 2. Inversion de contrôle et injection de dépendance
+- **Processus** :
+  - Annotation de `DashboardService` avec `@Service` pour en faire un bean Spring.
+  - Injection de `DashboardService` dans `DashboardController` via `@Autowired` dans le constructeur.
+- **Détails** :
+  - **Pourquoi** : Réduit le couplage et améliore la modularité.
+  - **Comment** : Spring crée et gère l’instance de `DashboardService`, puis l’injecte automatiquement.
+  - **Résultat** : Le controller utilise un service sans l’instancier manuellement, facilitant les tests et évolutions.
