@@ -134,3 +134,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Permet des opérations non bloquantes.
   - **Comment** : Exécute la génération des données dans un thread séparé.
   - **Résultat** : Simule une récupération lente, optimisée par le cache.
+
+### 8. Filtrage des données avec Streams
+- **Processus** :
+  - Ajout d’une méthode `getDataByCategory` dans `DashboardService`.
+  - Mise à jour de `DashboardController` pour accepter un paramètre `category`.
+- **Détails** :
+  - **Pourquoi** : Permet une sélection dynamique des données.
+  - **Comment** : Utilise `filter` pour ne garder que les éléments correspondants.
+  - **Résultat** : L’API supporte le filtrage par catégorie.
