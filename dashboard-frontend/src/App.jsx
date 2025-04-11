@@ -1,25 +1,17 @@
-import {useEffect, useState} from "react";
 import ChartComponent from "./ChartComponent.jsx";
+import userDashboardData from "./hooks/userDashboardData.js";
 
 
 function App() {
-    const [data, setData] = useState([]);
+    const {data, loading, error} = userDashboardData();
 
-    useEffect(() => {
-        fetch('http://localhost:8000/api/dashboard/')
-            .then(res => res.json())
-            .then(data => setData(data))
-            .catch(err => console.log('Erreur: ' , err));
-    }, []);
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Something went wrong : {error.message}</div>;
 
     return (
-        <div style={{ padding: '20px' }}>
+        <div style={{padding: '20px'}}>
             <h1>Dashboard</h1>
-            {data.length > 0 ? (
-                <ChartComponent data={data} />
-            ) : (
-                <p>Loading...</p>
-            )}
+            <ChartComponent data={data}/>
         </div>
     );
 }
