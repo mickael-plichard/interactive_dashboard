@@ -1,5 +1,5 @@
 import { useQuery} from "@tanstack/react-query";
-import ChartComponent from "../ChartComponent.jsx";
+import ChartComponent from "./ChartComponent.jsx";
 import {useFilter} from "./context/FilterContext.jsx";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     const { data, isLoading, error } = useQuery({
         queryKey: ["dashboardData", category],
         queryFn: () =>
-            fetch(`http://localhost:8000/api/dashboard${category ? `?category=${category}` : ''}`
+            fetch(`http://localhost:8080/api/dashboard${category ? `?category=${category}` : ''}`
             ).then(res => res.json()),
     });
 
