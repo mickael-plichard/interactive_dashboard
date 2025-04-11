@@ -61,7 +61,7 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
 - Git et GitHub pour le versionnement
 
 ## Diagrammes
-- [Cas d'utilisation](/dashboard-docs/dashboard-usecase-diagram.png)
+- [Cas d'utilisation](/dashboard-docs/dashboard_usecase-diagram.png)
 - [Architecture du système](/dashboard-docs/dashboard_architecture-diagram.png)
 - [Séquence](/dashboard-docs/dashboard_sequence-diagram.png)
   
