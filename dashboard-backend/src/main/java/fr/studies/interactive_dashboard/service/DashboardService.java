@@ -1,11 +1,13 @@
 package fr.studies.interactive_dashboard.service;
 
 import fr.studies.interactive_dashboard.model.DataPoint;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Service
 public class DashboardService {
     public List<DataPoint> getMockedData() {
         return Stream.of(
