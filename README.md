@@ -107,3 +107,12 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
   - **Pourquoi** : Transforme les données brutes en visualisation intuitive.
   - **Comment** : Chart.js mappe les données sur un graphique configurable.
   - **Résultat** : Un tableau de bord visuel affichant les valeurs par date.
+
+### 5. Hooks personnalisés
+- **Processus** :
+  - Création d’un hook `useDashboardData` dans `hooks/useDashboardData.js`.
+  - Mise à jour de `App.jsx` pour utiliser ce hook.
+- **Détails** :
+  - **Pourquoi** : Sépare la logique de récupération des données.
+  - **Comment** : Encapsule `useState` et `useEffect` dans une fonction réutilisable.
+  - **Résultat** : Un composant `App` plus clair et extensible.
