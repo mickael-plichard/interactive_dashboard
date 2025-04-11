@@ -1,0 +1,55 @@
+# Fichiers génériques à ignorer
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Fichiers spécifiques à l’OS
+.DS_Store          # macOS
+Thumbs.db          # Windows
+
+# Répertoires de build et fichiers temporaires
+/target/           # Maven build output (backend)
+dist/              # Vite build output (frontend)
+node_modules/      # Dépendances Node.js (frontend)
+*.class            # Fichiers compilés Java
+
+# Fichiers de configuration IDE
+.idea/             # IntelliJ IDEA
+*.iml              # IntelliJ modules
+.vscode/           # Visual Studio Code
+
+# Fichiers Maven
+dependency-reduced-pom.xml
+pom.xml.versionsBackup
+.maven/            # Cache Maven local
+
+# Fichiers de dépendances locales
+.mvn/              # Maven wrapper
+mvnw               # Maven wrapper script (Unix)
+mvnw.cmd           # Maven wrapper script (Windows)
+
+# Fichiers de build Spring Boot
+dashboard-backend/target/  # Build spécifique au backend
+
+# Fichiers de cache et logs Spring Boot
+*.log.*
+spring.log
+
+# Fichiers de configuration locale (non versionnés)
+application-*.properties  # Propriétés spécifiques (ex. : application-dev.properties)
+*.env                     # Variables d’environnement
+
+# Fichiers de tests et coverage
+*.lcov
+coverage/          # Coverage Jest (frontend)
+test-results/      # Résultats de tests
+
+# Fichiers spécifiques à Vite/React
+dashboard-frontend/dist/   # Build spécifique au frontend
+.cache/            # Cache Vite
+vite.config.js.timestamp-*  # Fichiers temporaires Vite
+
+# Documentation générée (si applicable)
+docs/diagrams/*.png  # Diagrammes générés (optionnel, si tu veux les versionner, retire cette ligne)
