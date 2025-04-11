@@ -66,3 +66,15 @@ Pour cette phase initiale, le projet reste en local, sans base de données exter
 - [Séquence](/dashboard-docs/dashboard_sequence-diagram.png)
   
 ---
+
+## Implémentations
+
+### 1. Programmation fonctionnelle avec Streams
+- **Processus** :
+  - Création d’un modèle `DataPoint` pour représenter les données (date, valeur, catégorie).
+  - Implémentation d’un service `DashboardService` utilisant `Stream.of` pour générer des données mockées.
+  - Ajout d’un endpoint `/api/dashboard` dans `DashboardController` pour exposer les données.
+- **Détails** :
+  - **Pourquoi** : Simplifie la manipulation des collections avec un style déclaratif.
+  - **Comment** : `Stream.of` crée un flux d’objets `DataPoint`, et `collect(Collectors.toList())` le transforme en liste.
+  - **Résultat** : Une API REST retourne des données JSON prêtes à être consommées par le frontend.
